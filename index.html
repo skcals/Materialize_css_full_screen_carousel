@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>Materialize full screen Carousel</title>
+
+   <script type="text/javascript" src="js/jquery.min.js"></script>
+   <script src="js/materialize.min.js"></script>
+   <link rel="stylesheet" href="css/materialize.min.css">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  
+
+  <script>
+  	$(document).ready(function(){
+
+  		$('.carousel').carousel({fullWidth:true}).css("height", $(window).height());
+
+  		// for next slide
+  		$('.next').click(function(){
+  			$('.carousel').carousel('next');
+  		});
+        
+        // for prev slide
+        $('.prev').click(function(){
+  			$('.carousel').carousel('prev');
+  		});
+
+  	});
+  </script>
+
+  <style>
+  	
+  	.carousel .carousel-item>img{
+  		height: 100%;
+  		width: 100%;
+
+  	}
+  	.next, .prev{
+  		position: absolute;
+  		top:45%;
+  		color:white;
+  		cursor: pointer;
+
+  	}
+
+  	.prev{
+  		left: 0px;
+  	}
+    
+    .next{
+    	right:0px;
+    }
+
+
+  </style>
+ 
+ </head>
+ <body>
+    
+   <div class="full-silder">
+   	<div class="carousel carousel-slider" data-indicators="true">
+   		<a href="#one!" class="carousel-item"><img src="images/a.jpg"></a>
+   		<a href="#two!" class="carousel-item"><img src="images/b.jpg"></a>
+   		<a href="#three!" class="carousel-item"><img src="images/c.jpg"></a>
+   		<a href="#four!" class="carousel-item"><img src="images/d.jpg"></a>
+   		<a href="#five!" class="carousel-item"><img src="images/e.jpg"></a>
+   	</div>
+
+   	<!-- next and prev buttons -->
+
+   	<div class="next green"><i class="material-icons large">navigate_next</i></div>
+   	<div class="prev green"><i class="material-icons large">navigate_before</i></div>
+   </div>  
+
+ 	
+ </body>
+ </html>
